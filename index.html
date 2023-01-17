@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport">
+
+    <!-- Código necesario para importar el framework de CSS llamado Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Mediante este script podemos importar y usar en nuestro código el paquete de íconos llamado font awesome -->
+    <script src="https://kit.fontawesome.com/d57b664376.js" crossorigin="anonymous"></script>
+    <title>Instagram Feed</title>
+</head>
+
+<body>
+
+    <!-- Navbar start -->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <div>
+                <i class="fa-brands fa-instagram"></i>
+                <a class="navbar-brand" href="#">Instagram</a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Btn NewPost y Dropdown -->
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-success col-md-2 ms-auto" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Create a New Post
+            </button>
+
+            <!-- Modal - permite convocar un pop-up con campos interactivos en su interior -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <h6> Caption </h6>
+                            <div class="form-floating">
+                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px; border-top: none; border-left: none; border-right: none;"></textarea>
+                                <label style="border:none; color: rgb(197, 189, 189);" for="floatingTextarea2">Add the caption of your post here</label>
+                                <i style="padding-left: 10px; padding-top: 10px" class="fa-solid fa-camera"></i>
+                                <i style="padding-left: 10px; padding-top: 10px;" class="fa-solid fa-location-dot"></i>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-success">Publish</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Elemento dentro del Navbar, es un botón que permite desplegar un menú -->
+
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="margin-right: 10px;">
+                <i class="fa-solid fa-gear"></i>
+            </button>
+            <ul class="dropdown-menu" style="right: 0;
+                left: auto;">
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                <hr style="color: gray;">
+                <li><a class="dropdown-item" href="#" style="color: red;">Logout</a></li>
+            </ul>
+        </div>
+
+        <!-- End Navbar -->
+    </nav>
+
+    <!-- Comienza el Grid -->
+    <!-- Aquí convocamos un elemento de Bootstrap denominado "JavaScript behavior" que permite añadir varias tabs -->
+
+    <ul class="nav nav-tabs d-flex justify-content-center" id="myTab" role="tablist">
+
+        <!-- Añadimos dos tabs según el ejercicio requería, uno para la vista de Grid y el otro para la vista del feed de Instagram -->
+
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"><i class="fas fa-th"></i></button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false"><i style="color: 
+      rgb(46, 41, 41);" class="fa-solid fa-square"></i> </button>
+        </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+
+            <!-- A continuación añadimos tres elementos del tipo "card group" consecutivamente -->
+
+            <div class="card-group" style="margin: 0; margin-bottom: 0;">
+                <div class="card m-2 border-1">
+                    <img src="https://images.theabcdn.com/i/16057114/600x600/c" class="card-img-top" alt="interstellar">
+                </div>
+                <div class="card m-2 border-1">
+                    <img src="https://m.media-amazon.com/images/I/41DZVaTOuLL._AC_.jpg" class="card-img-top" alt="">
+                </div>
+                <div class="card m-2 border-1">
+                    <img src="https://www.goodnes.com/sites/g/files/jgfbjl321/files/2020-11/600x600_risingCrust_lifestyle_2.jpg" class="card-img-top" alt="">
+                </div>
+
+            </div>
+            <div class="card-group" style="margin: 0; margin-bottom: 0;">
+                <div class="card m-2 border-1">
+                    <img src="https://papers.co/wallpaper/papers.co-md63-star-blue-space-galaxy-1-wallpaper.jpg" class="card-img-top" alt="stars">
+                </div>
+                <div class="card m-2 border-1">
+                    <img src="https://st2.depositphotos.com/2694377/8385/i/600/depositphotos_83854320-stock-photo-leopard.jpg" class="card-img-top" alt="">
+                </div>
+                <div class="card m-2 border-1">
+                    <img src="https://images.theabcdn.com/i/28134972/600x600/c" class="card-img-top" alt="">
+                </div>
+
+            </div>
+            <div class="card-group" style="margin: 0; margin-bottom: 0;">
+                <div class="card m-2 border-1">
+                    <img src="https://ih1.redbubble.net/image.1462167855.3527/st,small,507x507-pad,600x600,f8f8f8.jpg" class="card-img-top" alt="">
+                </div>
+                <div class="card m-2 border-1">
+                    <img src="https://i.pinimg.com/736x/9d/43/10/9d431099a41555916b67d1251f9b9916--basketball-is-life-nba-basketball.jpg" class="card-img-top" alt="">
+                </div>
+                <div class="card m-2 border-1">
+                    <img src="https://www.elmueble.com/medio/2023/01/10/gato-bebe_c0649b04_230110201029_600x600.jpg" class="card-img-top" alt="">
+                </div>
+
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+
+            <!-- En esta parte del código creamos una serie de "cards" consecutivas en la segunda parte del elemento "JavaScript behavior" que añade tabs -->
+
+            <div class="card d-flex justify-content-center" style="width: 520px; height: 600px; margin: 0 auto; margin-top: 20px; margin-bottom: 20px;">
+                <div class="card-body">
+                    <div style="display:flex; height: 50px; align-items: center;">
+                        <h5 class="card-title">Mi pelicula favorita, Interstellar!</h5>
+                        <h5 style="position: absolute; right: 15px;">1/9</h5>
+                    </div>
+                    <img style="height: 450px; width: 485px; padding-bottom: 10px;" src="https://images.theabcdn.com/i/16057114/600x600/c" class="card-img-top" alt="la mejor pelicula">
+                    <h5>205 Likes</h5>
+                    <p class="card-text">Este es un ejemplo muy simple que intenta emular el cómo se vería un comentario en Instagram</p>
+                </div>
+            </div>
+            <div class="card d-flex justify-content-center" style="width: 520px; height: 600px; margin: 0 auto; margin-top: 20px; margin-bottom: 20px;">
+                <div class="card-body">
+                    <div style="display:flex; height: 50px; align-items: center;">
+                        <h5 class="card-title">function takeMyMoney()</h5>
+                        <h5 style="position: absolute; right: 15px;">2/9</h5>
+                    </div>
+                    <img style="height: 450px; width: 485px; padding-bottom: 10px;" src="https://m.media-amazon.com/images/I/41DZVaTOuLL._AC_.jpg" class="card-img-top" alt="tacita epica">
+                    <h5>108 Likes</h5>
+                    <p class="card-text">Este es un ejemplo muy simple que intenta emular el cómo se vería un comentario en Instagram</p>
+                </div>
+            </div>
+            <div class="card d-flex justify-content-center" style="width: 520px; height: 600px; margin: 0 auto; margin-top: 20px; margin-bottom: 20px;">
+                <div class="card-body">
+                    <div style="display:flex; height: 50px; align-items: center;">
+                        <h5 class="card-title">Un gustito de finde, acompañando una bebida</h5>
+                        <h5 style="position: absolute; right: 15px;">3/9</h5>
+                    </div>
+                    <img style="height: 450px; width: 485px; padding-bottom: 10px;" src="https://www.goodnes.com/sites/g/files/jgfbjl321/files/2020-11/600x600_risingCrust_lifestyle_2.jpg" class="card-img-top" alt="pizza yuumy">
+                    <h5>167 Likes</h5>
+                    <p class="card-text">Este es un ejemplo muy simple que intenta emular el cómo se vería un comentario en Instagram</p>
+                </div>
+            </div>
+            <div class="card d-flex justify-content-center" style="width: 520px; height: 600px; margin: 0 auto; margin-top: 20px; margin-bottom: 20px;">
+                <div class="card-body">
+                    <div style="display:flex; height: 50px; align-items: center;">
+                        <h5 class="card-title">No apuntes a la oscuridad, apunta a las estrellas</h5>
+                        <h5 style="position: absolute; right: 15px;">4/9</h5>
+                    </div>
+                    <img style="height: 450px; width: 485px; padding-bottom: 10px;" src="https://papers.co/wallpaper/papers.co-md63-star-blue-space-galaxy-1-wallpaper.jpg" class="card-img-top" alt="stars">
+                    <h5>128 Likes</h5>
+                    <p class="card-text">Este es un ejemplo muy simple que intenta emular el cómo se vería un comentario en Instagram</p>
+                </div>
+            </div>
+            <div class="card d-flex justify-content-center" style="width: 520px; height: 600px; margin: 0 auto; margin-top: 20px; margin-bottom: 20px;">
+                <div class="card-body">
+                    <div style="display:flex; height: 50px; align-items: center;">
+                        <h5 class="card-title">Un leopardo viendo su almuerzo</h5>
+                        <h5 style="position: absolute; right: 15px;">5/9</h5>
+                    </div>
+                    <img style="height: 450px; width: 485px; padding-bottom: 10px;" src="https://st2.depositphotos.com/2694377/8385/i/600/depositphotos_83854320-stock-photo-leopard.jpg" class="card-img-top" alt="leopardito">
+                    <h5>131 Likes</h5>
+                    <p class="card-text">Este es un ejemplo muy simple que intenta emular el cómo se vería un comentario en Instagram</p>
+                </div>
+            </div>
+            <div class="card d-flex justify-content-center" style="width: 520px; height: 600px; margin: 0 auto; margin-top: 20px; margin-bottom: 20px;">
+                <div class="card-body">
+                    <div style="display:flex; height: 50px; align-items: center;">
+                        <h5 class="card-title">Apúrate Morty burpp!!</h5>
+                        <h5 style="position: absolute; right: 15px;">6/9</h5>
+                    </div>
+                    <img style="height: 450px; width: 485px; padding-bottom: 10px;" src="https://images.theabcdn.com/i/28134972/600x600/c" class="card-img-top" alt="">
+                    <h5>189 Likes</h5>
+                    <p class="card-text">Este es un ejemplo muy simple que intenta emular el cómo se vería un comentario en Instagram</p>
+                </div>
+            </div>
+            <div class="card d-flex justify-content-center" style="width: 520px; height: 600px; margin: 0 auto; margin-top: 20px; margin-bottom: 20px;">
+                <div class="card-body">
+                    <div style="display:flex; height: 50px; align-items: center;">
+                        <h5 class="card-title">Un breve, pero gran recordatorio</h5>
+                        <h5 style="position: absolute; right: 15px;">7/9</h5>
+                    </div>
+                    <img style="height: 450px; width: 485px; padding-bottom: 10px;" src="https://ih1.redbubble.net/image.1462167855.3527/st,small,507x507-pad,600x600,f8f8f8.jpg" class="card-img-top" alt="">
+                    <h5>321 Likes</h5>
+                    <p class="card-text">Este es un ejemplo muy simple que intenta emular el cómo se vería un comentario en Instagram</p>
+                </div>
+            </div>
+            <div class="card d-flex justify-content-center" style="width: 520px; height: 600px; margin: 0 auto; margin-top: 20px; margin-bottom: 20px;">
+                <div class="card-body">
+                    <div style="display:flex; height: 50px; align-items: center;">
+                        <h5 class="card-title">Apunta a tú mejor versión</h5>
+                        <h5 style="position: absolute; right: 15px;">8/9</h5>
+                    </div>
+                    <img style="height: 450px; width: 485px; padding-bottom: 10px;" src="https://i.pinimg.com/736x/9d/43/10/9d431099a41555916b67d1251f9b9916--basketball-is-life-nba-basketball.jpg" class="card-img-top" alt="">
+                    <h5>199 Likes</h5>
+                    <p class="card-text">Este es un ejemplo muy simple que intenta emular el cómo se vería un comentario en Instagram</p>
+                </div>
+            </div>
+            <div class="card d-flex justify-content-center" style="width: 520px; height: 600px; margin: 0 auto; margin-top: 20px; margin-bottom: 20px;">
+                <div class="card-body">
+                    <div style="display:flex; height: 50px; align-items: center;">
+                        <h5 class="card-title">Un lindo minino</h5>
+                        <h5 style="position: absolute; right: 15px;">9/9</h5>
+                    </div>
+                    <img style="height: 450px; width: 485px; padding-bottom: 10px;" src="https://www.elmueble.com/medio/2023/01/10/gato-bebe_c0649b04_230110201029_600x600.jpg" class="card-img-top" alt="">
+                    <h5>151 Likes</h5>
+                    <p class="card-text">Este es un ejemplo muy simple que intenta emular el cómo se vería un comentario en Instagram</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Last div -->
+
+
+    </div>
+
+
+    <!-- Script que permite importar las funcionalidad de JavaScript que tienen algunos elementos de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+
+</html>
